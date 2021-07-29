@@ -1,0 +1,7 @@
+/target
+
+# Fake Mail Server
+logs
+
+# Development
+.idea
