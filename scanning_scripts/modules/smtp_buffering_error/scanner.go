@@ -243,7 +243,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 		result.Trace = append(result.Trace, "S: "+strings.Trim(ret, "\r\n"))
 		// check whether the buffered EHLO was OK'd
 		if strings.Contains(ret, "250 ") {
-			// We are now certain that the target (errornously) buffered the pre-TLS EHLO
+			// We are now certain that the target (erroneously) buffered the pre-TLS EHLO
 			result.Vulnerable = true
 		} else {
 			return zgrab2.SCAN_UNKNOWN_ERROR, result, nil
@@ -252,7 +252,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 	result.Status++
 
 	// Step 5
-	// Send a QUIT, maybe giving the errornous buffer a little push
+	// Send a QUIT, maybe giving the erroneous buffer a little push
 	command = "QUIT"
 	result.Trace = append(result.Trace, "C: "+command)
 	conn.Conn.SetReadDeadline(time.Now().Add(singleReadTimeout))

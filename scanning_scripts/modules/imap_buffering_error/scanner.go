@@ -218,7 +218,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 		result.Trace = append(result.Trace, "S: "+strings.Trim(ret, "\r\n"))
 		// check whether the buffered NOOP got a response
 		if strings.Contains(ret, tag) {
-			// We are now certain that the target (errornously) buffered the pre-TLS NOOP.
+			// We are now certain that the target (erroneously) buffered the pre-TLS NOOP.
 			result.Vulnerable = true
 		} else {
 			return zgrab2.SCAN_UNKNOWN_ERROR, result, nil
@@ -243,7 +243,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 	result.Trace = append(result.Trace, "S: "+strings.Trim(ret, "\r\n"))
 	result.Status++
 	if strings.Contains(ret, tag) {
-		// We are now certain that the target (errornously) buffered the pre-TLS B CAPABILITY
+		// We are now certain that the target (erroneously) buffered the pre-TLS B CAPABILITY
 		result.Vulnerable = true
 	}
 
