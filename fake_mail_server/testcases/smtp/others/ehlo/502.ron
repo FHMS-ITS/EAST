@@ -3,7 +3,7 @@
 
     capabilities_tls: [Auth([Plain])],
     override_response: {
-        "ehlo": "502 Command not implemnted\r\n",
+        "ehlo": "502 Command not implemented\r\n",
     },
 
     pkcs12: (
