@@ -26,7 +26,7 @@ type ScanResults struct {
 	// PostTLS is the targets response to EHLO in encrypted (post-tls) state
 	PostTLS string `json:"postTLS,omitempty"`
 
-	// Help is the targets response to the HELP command in encrypte (tls) state
+	// Help is the targets response to the HELP command in encrypted (tls) state
 	PostTLSHelp string `json:"PosTLShelp,omitempty"`
 
 	// HTTP is the targets response to the HTTP-Get (if any)
