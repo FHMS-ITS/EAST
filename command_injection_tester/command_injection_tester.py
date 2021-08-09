@@ -87,7 +87,7 @@ class ServerTest:
 
     def _recv_multiple_segments(self, sock, logger) -> bytes:
         """
-        Allows recv of multiple segements, e.g., if a server uses send(line1); send(line2); ...
+        Allows recv of multiple segments, e.g., if a server uses send(line1); send(line2); ...
         """
         limit = 5
         resp = b""
