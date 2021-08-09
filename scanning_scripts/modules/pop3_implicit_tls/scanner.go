@@ -14,7 +14,7 @@ type ScanResults struct {
 	Greeting string `json:"help,omitempty"`
 
 	// Capabilities is the targets response to CAPA
-	Capabilties string `json:"Capabilties,omitempty"`
+	Capabilities string `json:"Capabilities,omitempty"`
 
 	// Trace is the complete communication between client and server
 	Trace []string `json:"trace"`
@@ -66,7 +66,7 @@ func (module *Module) NewScanner() zgrab2.Scanner {
 
 // Description returns an overview of this module.
 func (module *Module) Description() string {
-	return "Fetches for POP3 capabilties for implicit TLS"
+	return "Fetches for POP3 capabilities for implicit TLS"
 }
 
 // Validate checks that the flags are valid.
@@ -168,7 +168,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 	result.Trace = append(result.Trace, "C: "+command)
 	conn.Conn.SetReadDeadline(time.Now().Add(singleReadTimeout))
 	ret, err = conn.SendCommandCAPA(command)
-	result.Capabilties = ret
+	result.Capabilities = ret
 	result.Trace = append(result.Trace, "S: "+strings.Trim(ret, "\r\n"))
 	result.Status++
 

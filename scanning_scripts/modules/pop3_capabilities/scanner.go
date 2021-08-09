@@ -51,7 +51,7 @@ type Scanner struct {
 // RegisterModule registers the zgrab2 module.
 func RegisterModule() {
 	var module Module
-	_, err := zgrab2.AddCommand("pop3_capabilities", "Fetches POP3 capabilties before and after STARTTLS", module.Description(), 110, &module)
+	_, err := zgrab2.AddCommand("pop3_capabilities", "Fetches POP3 capabilities before and after STARTTLS", module.Description(), 110, &module)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -69,7 +69,7 @@ func (module *Module) NewScanner() zgrab2.Scanner {
 
 // Description returns an overview of this module.
 func (module *Module) Description() string {
-	return "Fetches POP3 capabilties before and after STARTTLS"
+	return "Fetches POP3 capabilities before and after STARTTLS"
 }
 
 // Validate checks that the flags are valid.

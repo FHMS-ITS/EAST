@@ -14,7 +14,7 @@ type ScanResults struct {
 	Greeting string `json:"greeting,omitempty"`
 
 	// Capabilities is the targets response to CAPA
-	Capabilties string `json:"Capabilties,omitempty"`
+	Capabilities string `json:"Capabilities,omitempty"`
 
 	// PostTLSID is the targets response to ID in encrypted (post-tls) state
 	ID string `json:"ID,omitempty"`
@@ -69,7 +69,7 @@ func (module *Module) NewScanner() zgrab2.Scanner {
 
 // Description returns an overview of this module.
 func (module *Module) Description() string {
-	return "Fetches IMAP capabilties on implicit TLS IMAP."
+	return "Fetches IMAP capabilities on implicit TLS IMAP."
 }
 
 // Validate checks that the flags are valid.
@@ -170,7 +170,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 	result.Trace = append(result.Trace, "C: "+command)
 	conn.Conn.SetReadDeadline(time.Now().Add(singleReadTimeout))
 	ret, err = conn.SendCommand(command)
-	result.Capabilties = ret
+	result.Capabilities = ret
 	result.Trace = append(result.Trace, "S: "+strings.Trim(ret, "\r\n"))
 	result.Status++
 

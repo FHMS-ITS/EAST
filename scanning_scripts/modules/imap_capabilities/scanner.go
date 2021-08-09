@@ -75,7 +75,7 @@ func (module *Module) NewScanner() zgrab2.Scanner {
 
 // Description returns an overview of this module.
 func (module *Module) Description() string {
-	return "Fetches IMAP capabilties before and after STARTTLS"
+	return "Fetches IMAP capabilities before and after STARTTLS"
 }
 
 // Validate checks that the flags are valid.

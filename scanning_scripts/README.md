@@ -18,7 +18,7 @@
 
 ### imap_capabilities
 
-Fetches IMAP capabilties before and after STARTTLS on port 143.
+Fetches IMAP capabilities before and after STARTTLS on port 143.
 
 Example:
 
@@ -43,7 +43,7 @@ Procedure:
 
 ### imap_implicit_tls
 
-Fetches IMAP capabilties for implicit TLS on port 993.
+Fetches IMAP capabilities for implicit TLS on port 993.
 
 Example:
 
@@ -96,7 +96,7 @@ Results:
 
 ### smtp_capabilities
 
-Fetches SMTP capabilties before and after STARTTLS.
+Fetches SMTP capabilities before and after STARTTLS.
 
 Example:
 
@@ -123,7 +123,7 @@ Procedure:
 
 ### smtp_implicit_tls
 
-Fetches SMTP capabilties before and after STARTTLS.
+Fetches SMTP capabilities before and after STARTTLS.
 
 Example:
 
@@ -183,7 +183,7 @@ Results:
 
 ### pop3_capabilities
 
-Fetches POP3 capabilties before and after STARTTLS.
+Fetches POP3 capabilities before and after STARTTLS.
 
 Example:
 
@@ -207,7 +207,7 @@ Procedure:
 
 ### pop3_implicit_tls
 
-Fetches POP3 capabilties for implicit TLS.
+Fetches POP3 capabilities for implicit TLS.
 
 Example:
 
