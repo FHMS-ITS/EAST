@@ -14,7 +14,7 @@ type ScanResults struct {
 	// Trace is the complete communication between client and server
 	Trace []string `json:"trace"`
 
-	// Status is the step, the execution of the Scan ended in (used for deubg)
+	// Status is the step, the execution of the Scan ended in (used for debug)
 	Status int `json:"status,omitempty"`
 
 	// PreTLS is the targets response to EHLO in plain (pre-tls) state
