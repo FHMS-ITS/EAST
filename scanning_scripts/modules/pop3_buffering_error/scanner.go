@@ -139,7 +139,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 	}
 
 	// Step 2
-	// Send STLS + CAPA command, Read a single reponse (expecting the EHLO to get buffered into the TLS-Session)
+	// Send STLS + CAPA command, Read a single response (expecting the EHLO to get buffered into the TLS-Session)
 	command = "STLS\r\nCAPA"
 	result.Trace = append(result.Trace, "C: "+command)
 	conn.Conn.SetReadDeadline(time.Now().Add(singleReadTimeout))
