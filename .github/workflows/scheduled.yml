@@ -1,0 +1,17 @@
+name: Scheduled
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+defaults:
+  run:
+    working-directory: fake_mail_server
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - uses: EmbarkStudios/cargo-deny-action@v1
