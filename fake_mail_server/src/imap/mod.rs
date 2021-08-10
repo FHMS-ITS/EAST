@@ -11,6 +11,7 @@ use imap_codec::{
         command::{Command, CommandBody, SearchKey::Header, StatusItem},
         core::Tag,
         data_items::{DataItem, MacroOrDataItems},
+        mailbox::Mailbox,
         response::{Capability, Code, Continuation, Data, Status, StatusItemResponse},
         sequence::{SequenceSet, Strategy},
         AuthMechanism,
@@ -19,7 +20,6 @@ use imap_codec::{
 use tracing::{debug, error, info};
 
 use crate::{imap::account::Account, utils::escape, ConsolidatedStream, Splitter, PKCS12};
-use imap_codec::types::mailbox::Mailbox;
 
 pub mod account;
 pub mod config;
