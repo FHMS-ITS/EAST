@@ -28,7 +28,7 @@ type ScanResults struct {
 	// Trace is the complete communication between client and server
 	Trace []string `json:"trace"`
 
-	// Status is the step, the execution of the Scan ended in (used for deubg)
+	// Status is the step, the execution of the Scan ended in (used for debug)
 	Status int `json:"status,omitempty"`
 
 	// TLSLog is the standard TLS log
@@ -75,7 +75,7 @@ func (module *Module) NewScanner() zgrab2.Scanner {
 
 // Description returns an overview of this module.
 func (module *Module) Description() string {
-	return "Fetches IMAP capabilties before and after STARTTLS"
+	return "Fetches IMAP capabilities before and after STARTTLS"
 }
 
 // Validate checks that the flags are valid.

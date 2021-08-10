@@ -17,7 +17,7 @@ type ScanResults struct {
 	// Trace is the complete communication between client and server
 	Trace []string `json:"trace"`
 
-	// Status is the step, the execution of the Scan ended in (used for deubg)
+	// Status is the step, the execution of the Scan ended in (used for debug)
 	Status int `json:"status,omitempty"`
 
 	// TLSLog is the standard TLS log
@@ -139,7 +139,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 	}
 
 	// Step 2
-	// Send STLS + CAPA command, Read a single reponse (expecting the EHLO to get buffered into the TLS-Session)
+	// Send STLS + CAPA command, Read a single response (expecting the EHLO to get buffered into the TLS-Session)
 	command = "STLS\r\nCAPA"
 	result.Trace = append(result.Trace, "C: "+command)
 	conn.Conn.SetReadDeadline(time.Now().Add(singleReadTimeout))
@@ -216,7 +216,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 		result.Trace = append(result.Trace, "S: "+strings.Trim(ret, "\r\n"))
 		// check whether the buffered CAPA was OK'd/ERR'd
 		if strings.Contains(strings.ToUpper(ret), "+OK") || strings.Contains(strings.ToUpper(ret), "-ERR") {
-			// We are now certain that the target (errornously) buffered the pre-TLS EHLO
+			// We are now certain that the target (erroneously) buffered the pre-TLS EHLO
 			result.Vulnerable = true
 		} else {
 			return zgrab2.SCAN_UNKNOWN_ERROR, result, nil
@@ -225,7 +225,7 @@ func (scanner *Scanner) Scan(target zgrab2.ScanTarget) (zgrab2.ScanStatus, inter
 	result.Status++
 
 	// Step 5
-	// Send a QUIT, maybe giving the errornous buffer a little push
+	// Send a QUIT, maybe giving the erroneous buffer a little push
 	command = "QUIT"
 	result.Trace = append(result.Trace, "C: "+command)
 	conn.Conn.SetReadDeadline(time.Now().Add(singleReadTimeout))

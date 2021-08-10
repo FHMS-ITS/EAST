@@ -205,7 +205,7 @@ fn ok_greeting_codes() {
     ];
     for cap_combo in combos(&caps) {
         let mut cap_str = String::new();
-        cap_str.push_str("CAPABALITY");
+        cap_str.push_str("CAPABILITY");
         let mut cap_vec: Vec<Capability> = Vec::new();
         for cap in &cap_combo {
             match cap {

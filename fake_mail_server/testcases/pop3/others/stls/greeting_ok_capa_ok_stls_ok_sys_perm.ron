@@ -2,7 +2,7 @@
     greeting: "+OK POP3 server ready.\r\n",
 
     override_response: {
-        "stls": "+OK [sys/perm] perm alert\r\n", // Note: no change to STLS, when overriden!
+        "stls": "+OK [sys/perm] perm alert\r\n", // Note: no change to STLS, when overridden!
     },
 
     capa: [
