@@ -1,1 +1,0 @@
-Note: The Command Injection Tester has been moved to its own repository: [https://github.com/Email-Analysis-Toolkit/command-injection-tester](https://github.com/Email-Analysis-Toolkit/command-injection-tester).

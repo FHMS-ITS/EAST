@@ -1,1 +1,0 @@
-Note: The Scanning Scripts have been moved to their own repository: [https://github.com/Email-Analysis-Toolkit/command-injection-scanner](https://github.com/Email-Analysis-Toolkit/command-injection-scanner).
