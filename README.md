@@ -1,6 +1,6 @@
 # Email Analysis Toolkit (EAST)
 
-This repository contains information on the artifacts for the USENIX paper ["Why TLS is better without STARTTLS: A Security Analysis of STARTTLS in the Email Context"](https://www.usenix.org/conference/usenixsecurity21/presentation/poddebniak) by Damian Poddebniak¹, Fabian Ising¹, Hanno Böck², and Sebastian Schinzel¹. The Fake Mail Server and the Command Injection Tester were peer-reviewed in the [USENIX'21 Call for Artifacts](https://www.usenix.org/conference/usenixsecurity21/call-for-artifacts).
+This repository contains information on the artifacts for the USENIX paper ["Why TLS is better without STARTTLS: A Security Analysis of STARTTLS in the Email Context"](https://www.usenix.org/conference/usenixsecurity21/presentation/poddebniak) ([Pre-Print](https://nostarttls.secvuln.info/paper.pdf)) by Damian Poddebniak¹, Fabian Ising¹, Hanno Böck², and Sebastian Schinzel¹. The Fake Mail Server and the Command Injection Tester were peer-reviewed in the [USENIX'21 Call for Artifacts](https://www.usenix.org/conference/usenixsecurity21/call-for-artifacts).
 
 ¹ Münster University of Applied Sciences        ² Independent Researcher
 
