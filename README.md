@@ -4,6 +4,10 @@ This repository contains artifacts for the USENIX paper "Why TLS is better witho
 
 ¹ Münster University of Applied Sciences        ² Independent Researcher
 
+More information about our STARTTLS research can be found here:
+
+ * https://nostarttls.secvuln.info/
+
 ## Contents of this Repository
 
 We provide three components, each of which comes with its own README in the corresponding folder.
